@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Why Motion is the Future of Brand Identity</title>
+  <script src="https://unpkg.com/@rive-app/webgl"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Helvetica Neue', sans-serif;
+      color: #333;
+      background-color: #fff;
+      line-height: 1.6;
+    }
+    .canvas-container {
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+    }
+    .canvas-container.cover {
+      padding-top: 31.25%; /* 600/1920 = 0.3125 or 31.25% */
+    }
+    #rive-cover {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    #rive-vertzero {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      height: calc(100% - 10px);
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    h1, h2, h3 {
+      color: #111;
+    }
+    .byline {
+      color: #777;
+      font-size: 0.9rem;
+      margin-bottom: 1.5rem;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      margin: 1rem 0;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin: 1.5rem 0;
+    }
+    .video-container {
+      position: relative;
+      width: 100%;
+      margin: 20px 0;
+    }
+    .canvas-container.full-hd {
+      padding-top: 56.25%; /* 1080/1920 = 0.5625 or 56.25% */
+      margin: auto;
+    }
+    
+    #riveAzladin {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      height: 100%;
+    }
+    .canvas-container.square-game {
+        width: 500px;
+        height: 500px;
+        padding-top: 0;
+        margin: 20px auto;
+        position: relative;
+    }
+    
+    #riveMinigame {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 500px;
+        height: 500px;
+    }
+    
+    .game-note {
+        text-align: center;
+        color: #666;
+        font-size: 0.9rem;
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Rive Cover Canvas -->
+  <div class="canvas-container cover">
+    <canvas id="rive-cover"></canvas>
+  </div>
+
+  <div class="container">
+    <h1>Why Motion is the Future of Brand Identity, and How to Do It Right</h1>
+    
+    <p> Vài năm trước, câu hỏi đặt ra là:<strong> Thương hiệu của bạn có nên bao gồm yếu tố chuyển động không?</strong>
+      Nhưng đến năm 2025, câu hỏi đó đã trở nên lỗi thời — bởi nhận diện tĩnh không còn đủ để kết nối với người dùng hiện đại.
+      <br>
+      <br>
+      Ngày nay, điều quan trọng hơn là: <br>
+      👉 Chuyển động được đan cài như thế nào vào cốt lõi thương hiệu của bạn?
+      Nó có giúp thương hiệu thể hiện tính cách, truyền tải thông điệp, và kết nối cảm xúc với người dùng ở mọi điểm chạm không?</p>
+
+    <div class="video-container">
+      <iframe title="vimeo-player" 
+              src="https://player.vimeo.com/video/1048489706?h=53a6ed52c4&autoplay=1&loop=1&background=1" 
+              width="100%" 
+              height="450" 
+              frameborder="0" 
+              allowfullscreen>
+      </iframe>
+    </div>
+
+    <h2>Tại sao chuyển động là chìa khóa cho thương hiệu hiện đại</h2>
+
+  <p>Trong thời đại mà <strong>màn hình trở thành cửa sổ chính kết nối chúng ta với thế giới</strong>, <strong>chuyển động</strong> cho phép thương hiệu <strong>tạo ra mối liên kết sâu sắc và chân thực</strong> với khán giả.</p>
+
+  <p>Và thay vì chỉ là một yếu tố "trang trí" hay "bổ sung" trong hệ thống nhận diện, <strong>chuyển động cần được tích hợp ngay từ những bước đầu tiên</strong> trong quá trình xây dựng thương hiệu — như một phần cốt lõi của chiến lược, chứ không phải là ý tưởng đến sau.</p>
+
+  <p>Bởi vì chúng ta — <em>con người</em> — <strong>không chỉ giao tiếp bằng lời nói</strong>. Chúng ta <strong>cử chỉ, di chuyển, biểu đạt cảm xúc bằng tư thế, ánh mắt, nhịp điệu</strong>.</p>
+
+  <blockquote>👉 Một thương hiệu <strong>thiếu chuyển động</strong> cũng giống như một con người <strong>bị đóng băng tại chỗ</strong> — <em>về mặt kỹ thuật vẫn hiện diện</em>, nhưng <strong>thiếu đi sức sống để kết nối và lay động người khác</strong>.</blockquote>
+
+  <p>Trong bài viết này, tôi sẽ chia sẻ <strong>cách tích hợp chuyển động một cách hiệu quả và có chủ đích</strong> vào công việc sáng tạo — để thương hiệu của bạn <strong>không chỉ được nhìn thấy, mà còn được cảm nhận</strong>.</p>
+ 
+
+    <h2>Bắt đầu từ góc nhìn truyền thống</h2>
+<p>Hãy cùng lùi lại một bước. Truyền thống xây dựng nhận diện thương hiệu thường tập trung vào các yếu tố tĩnh: logo, bảng màu, kiểu chữ và giọng điệu thương hiệu. Những yếu tố này vẫn vô cùng quan trọng — nhưng giờ đây, chúng không còn đủ nếu đứng một mình.</p>
+<p>Trong thế giới đầy rẫy mạng xã hội, màn hình và sự tương tác liên tục, khán giả mong đợi các thương hiệu phản hồi, thích ứng và giao tiếp một cách linh hoạt.
+ br
+  <br> Đây chính là lúc chuyển động phát huy vai trò — nó thổi hồn vào các yếu tố tĩnh, biến chúng thành những biểu đạt sống động, có nhịp điệu và cảm xúc, đại diện cho tính cách thương hiệu.
+  </p>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 20px 0;">
+      <div style="padding:56.25% 0 0 0;position:relative;">
+        <iframe src="https://player.vimeo.com/video/1048497384?title=0&byline=0&portrait=0&badge=0&autopause=0&autoplay=1&loop=1&background=1" 
+                frameborder="0" 
+                style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+                title="Demo Intro logo BSS">
+        </iframe>
+      </div>
+      
+    
+      <div style="padding:56.25% 0 0 0;position:relative;">
+        <iframe src="https://player.vimeo.com/video/1048500304?title=0&byline=0&portrait=0&badge=0&autopause=0&autoplay=1&loop=1&background=1" 
+                frameborder="0" 
+                style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+                title="Demo intro logo version 2">
+        </iframe>
+      </div>
+      
+      <div style="padding:56.25% 0 0 0;position:relative;">
+        <iframe src="https://player.vimeo.com/video/1048484902?title=0&byline=0&portrait=0&badge=0&autopause=0&autoplay=1&loop=1&background=1" 
+                frameborder="0" 
+                style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+                title="Intro Motion Logo VertZero">
+        </iframe>
+      </div>
+
+      <div style="padding:56.25% 0 0 0;position:relative;">
+        <iframe src="https://player.vimeo.com/video/1048503231?title=0&byline=0&portrait=0&badge=0&autopause=0&autoplay=1&loop=1&background=1" 
+                frameborder="0" 
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+                title="intro asinzu logo">
+        </iframe>
+      </div>
+    </div>
+
+    <h2>Ngôn ngữ không biên giới</h2>
+
+    <p>
+      Một trong những <strong>sức mạnh lớn nhất của motion identity</strong> là khả năng 
+      <strong>vượt qua mọi ranh giới văn hóa và ngôn ngữ</strong>.
+    </p>
+  
+    <p>
+      Khi <em>chữ viết hay hình ảnh</em> có thể bị "lạc nhịp" trong quá trình chuyển ngữ, thì 
+      <strong>chuyển động lại chạm đến bản năng sâu thẳm của con người</strong> — nó 
+      <strong>giao tiếp bằng nhịp điệu, cảm xúc và cảm giác</strong>, những yếu tố mà 
+      ai cũng có thể cảm nhận, bất kể họ đến từ đâu.
+    </p>
+ 
+
+    <div style="padding:56.25% 0 0 0;position:relative;margin:20px auto;max-width:800px;">
+        <iframe src="https://player.vimeo.com/video/923377873?h=4bac1a5ddf&autoplay=1&loop=1&background=1&muted=1" 
+                frameborder="0" 
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; muted" 
+                style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+                title="intro asinzu logo"
+                allowfullscreen>
+        </iframe>
+    </div>
+    <script src="https://player.vimeo.com/api/player.js"></script>
+ 
+
+    <div class="highlight">
+      <p>
+        Hệ thống <strong>motion identity</strong> mà chúng tôi xây dựng đã góp phần 
+        <strong>định hình rõ nét tính cách thương hiệu</strong>, thông qua các yếu tố hình ảnh linh hoạt — 
+        có thể phản ứng và thích nghi một cách tự nhiên với nhiều bối cảnh khác nhau.
+      </p>
+    </div>
+  
+    <p>
+      Nhờ đó, thương hiệu duy trì được <strong>trải nghiệm nhất quán</strong> trên hàng loạt điểm chạm: 
+      từ <em>sự kiện trực tiếp, website, mạng xã hội cho đến các video quảng bá</em>.
+    </p>
+  
+    <p>
+      <strong>Chuyển động không chỉ làm thương hiệu trở nên sống động</strong>, mà còn là cách thương hiệu 
+      <em>tư duy, cảm nhận và phản hồi với thế giới số không ngừng biến chuyển</em>.
+    </p>
+
+    <div style="padding:56.25% 0 0 0;position:relative;">
+      <iframe src="https://player.vimeo.com/video/1048479991?title=0&byline=0&portrait=0&badge=0&autopause=0&autoplay=1&loop=1&background=1" 
+              frameborder="0" 
+              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" 
+              style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+              title="Motion Intro Logo MBF">
+      </iframe>
+    </div>
+
+ <h2>Ngôn ngữ chuyển động mang dấu ấn thương hiệu</h2>
+
+  <p>
+    Chúng tôi bắt đầu bằng cách <strong>xây dựng các nguyên tắc chuyển động cốt lõi</strong>, phản ánh chính xác 
+    <strong>tính cách và giá trị thương hiệu</strong>.
+  </p>
+
+  <p>
+    Mỗi chuyển động cần mang lại <strong>cảm giác tự nhiên, có chủ đích</strong>, các chuyển cảnh phải 
+    <strong>mượt mà</strong>, và từng tương tác phải <strong>truyền tải được cả chức năng lẫn cảm xúc</strong>.
+  </p>
+
+  <p>
+    Hệ thống mà chúng tôi phát triển <strong>không chỉ đơn thuần là làm mọi thứ chuyển động</strong> — mà là 
+    <strong>kiến tạo một "ngôn ngữ chuyển động" nhất quán</strong>, có khả năng biểu đạt trọn vẹn từ 
+    <em>sự sáng tạo tự do</em> đến <em>sự chuyên nghiệp trong cộng tác</em>.
+  </p>
+
+  <p>
+    Khi đó, <strong>chuyển động trở thành "giọng nói thứ hai" của thương hiệu</strong> — không cần lời nói, vẫn có thể 
+    <em>chạm đến trái tim người dùng một cách sâu sắc và tự nhiên</em>.
+  </p>
+
+    <div class="canvas-container full-hd">
+      <canvas id="rive-vertzero"></canvas>
+    </div>
+
+    <h2>Một vài lưu ý quan trọng khi phát triển Motion Identity hiệu quả</h2>
+
+    <p>Dựa trên kinh nghiệm thực tế từ các dự án đã thực hiện, dưới đây là những yếu tố cốt lõi cần cân nhắc khi xây dựng hệ thống nhận diện chuyển động cho thương hiệu:</p>
+  
+    <hr />
+  
+    <div class="point">
+      <div class="point-title">🔹 1. Bắt đầu từ chiến lược – không phải từ animation</div>
+      <p>Motion không chỉ để tạo hiệu ứng bắt mắt — nó phải phản ánh giá trị và tính cách thương hiệu.  
+      Mỗi chuyển động cần có mục đích rõ ràng, mang ý nghĩa và kết nối với trải nghiệm thương hiệu tổng thể.</p>
+    </div>
+  
+    <hr />
+  
+    <div class="point">
+      <div class="point-title">🔹 2. Xem xét toàn bộ hệ sinh thái thương hiệu</div>
+      <p>Motion Identity phải hoạt động tốt trên mọi điểm chạm —  
+      từ các <em>micro-interaction</em> trong app, đến chuyển động nổi bật trong các chiến dịch marketing.  
+      Tính nhất quán xuyên suốt giúp thương hiệu trở nên đồng bộ và dễ nhận diện hơn trong mắt người dùng.</p>
+    </div>
+  
+    <hr />
+  
+    <div class="point">
+      <div class="point-title">🔹 3. Xây dựng để có thể mở rộng</div>
+      <p>Tạo ra các nguyên tắc chuyển động linh hoạt để có thể áp dụng ở nhiều bối cảnh và nền tảng khác nhau.  
+      Tính linh hoạt giúp đội ngũ thiết kế, sản xuất và marketing dễ dàng duy trì sự thống nhất,  
+      ngay cả khi triển khai trên quy mô lớn hoặc trong các thị trường khác nhau.</p>
+    </div>
+  
+    <hr />
+  
+    <div class="point">
+      <div class="point-title">🔹 4. Giữ chuyển động mang tính con người</div>
+      <p>Chuyển động nên mang cảm giác tự nhiên và có mục đích, không máy móc hay dư thừa.  
+      Sự tự nhiên này giúp tạo nên kết nối cảm xúc, khiến người dùng cảm thấy thương hiệu chân thật và đáng tin cậy hơn.</p>
+      <p>Một thương hiệu "chuyển động như con người" sẽ dễ chạm đến trái tim hơn một thương hiệu chỉ biết chuyển động như máy móc.</p>
+    </div>
+  
+    <hr />
+  
+    <div class="point">
+      <div class="point-title">🔹 5. Thiết kế hướng đến hiệu năng</div>
+      <p>Một chuyển động dù đẹp đến đâu cũng vô nghĩa nếu gây khó chịu hoặc làm chậm trải nghiệm người dùng.  
+      Do đó, yếu tố kỹ thuật cần được tính đến ngay từ đầu:</p>
+      <ul>
+        <li>Liệu animation có chạy mượt trên mọi thiết bị không?</li>
+        <li>Có tối ưu cho hiệu suất web/app không?</li>
+        <li>Có hỗ trợ accessibility không?</li>
+      </ul>
+    </div>
+
+    <div style="text-align: center;">
+      <div class="canvas-container square-game">
+          <canvas id="riveMinigame"></canvas>
+      </div>
+      <div class="game-note">Minigame tạo bởi Rive - Nền tảng tạo Interactive Motion</div>
+    </div>
+
+
+
+    <h2>Tương lai của Motion Identity</h2>
+
+  <p>Trong bối cảnh công nghệ liên tục tiến hóa, <strong>chuyển động sẽ ngày càng đóng vai trò then chốt trong việc xây dựng nhận diện thương hiệu</strong>.</p>
+
+  <p>Sự phát triển của <strong>spatial computing</strong>, <strong>thực tế tăng cường (AR)</strong> và các <strong>giao diện số ngày càng tinh vi</strong> không chỉ mang đến <em>nhiều cơ hội sáng tạo mới</em>, mà còn đặt ra <em>những thách thức đòi hỏi tư duy thiết kế chuyển động sâu sắc hơn bao giờ hết</em>.</p>
+
+  <blockquote>
+    Chuyển động chính là thứ mang lại "sự sống" cho thương hiệu.
+  </blockquote>
+
+  <p>Không chỉ là việc làm cho hình ảnh chuyển động, mà là <strong>tạo ra kết nối chân thật giữa thương hiệu và con người</strong>.</p>
+
+  <p>Một thương hiệu biết ứng dụng chuyển động đúng cách sẽ là thương hiệu <strong>biết truyền cảm hứng, thể hiện cá tính và nuôi dưỡng niềm tin</strong> trong từng khoảnh khắc tương tác — dù là trên <em>màn hình nhỏ</em> hay trong <em>không gian số ba chiều của tương lai</em>.</p>
+
+
+  <!-- Rive Scripts -->
+  <script>
+    const rCover = new rive.Rive({
+      src: "mbfcover.riv",
+      canvas: document.getElementById("rive-cover"),
+      autoplay: true,
+      artboard: "Main",
+      stateMachines: "State Machine 1",
+      layout: new rive.Layout({
+        fit: rive.Fit.FitWidth,
+        alignment: rive.Alignment.Center
+      }),
+      onLoad: () => {
+        rCover.resizeDrawingSurfaceToCanvas();
+        console.log('Rive file loaded successfully');
+      },
+      onError: (err) => {
+        console.error('Error loading Rive file:', err);
+      }
+    });
+
+    const rVertzero = new rive.Rive({
+      src: "Vertzero.riv",
+      canvas: document.getElementById("rive-vertzero"),
+      autoplay: true,
+      stateMachines: "State machine 1",
+      artboard: "Main",
+      layout: new rive.Layout({
+        fit: rive.Fit.Contain,
+        alignment: rive.Alignment.Center
+      }),
+      onLoad: () => {
+        rVertzero.resizeDrawingSurfaceToCanvas();
+      },
+      onError: (err) => {
+        console.error('Error loading Vertzero:', err);
+      }
+    });
+
+    const rAzladin = new rive.Rive({
+      src: "Azladin.riv",
+      canvas: document.getElementById("riveAzladin"),
+      autoplay: true,
+      stateMachines: "State machine 1",
+      artboard: "Artboard",
+      layout: new rive.Layout({
+        fit: rive.Fit.FitWidth,
+        alignment: rive.Alignment.Center
+      }),
+      onLoad: () => {
+        rAzladin.resizeDrawingSurfaceToCanvas();
+      },
+    });
+
+    const rMinigame = new rive.Rive({
+        src: "minigame.riv",
+        canvas: document.getElementById("riveMinigame"),
+        autoplay: true,
+        stateMachines: "State Machine 1",
+        artboard: "JumpBall-Playground",
+        layout: new rive.Layout({
+            fit: rive.Fit.Contain,
+            alignment: rive.Alignment.Center
+        }),
+        onLoad: () => {
+            rMinigame.resizeDrawingSurfaceToCanvas();
+        },
+    });
+
+    const resizeRive = () => {
+      const container = document.querySelector('.canvas-container');
+      const containerWidth = container.offsetWidth;
+      const containerHeight = container.offsetHeight;
+      rCover.resize(containerWidth, containerHeight);
+      rVertzero.resize(containerWidth, containerHeight);
+      rAzladin.resize(containerWidth, containerHeight);
+      rMinigame.resize(containerWidth, containerHeight);
+    };
+
+    window.addEventListener('load', resizeRive);
+    window.addEventListener('resize', resizeRive);
+  </script>
+</body>
+</html>
